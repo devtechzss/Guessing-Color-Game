@@ -1,36 +1,41 @@
-*{
+* {
     padding: 0;
     margin: 0;
-    box-sizing: border-box; 
+    box-sizing: border-box;
+
 }
 
-body{
+body {
     height: 100vh;
-    background-image: linear-gradient(rgb(56, 56, 152),rgb(120, 23, 23),rgb(114, 114, 47)); 
-    backdrop-filter: .5;
+    background-image: url('./bg.jpg');
+
+
+    backdrop-filter: .6;
 }
 
-.navbar{
+.navbar {
     text-align: center;
     background-color: #333333;
     color: #efefef;
     padding: 20px;
-    box-shadow: 0 2px 10px red;
+    box-shadow: 0 2px 10px wheat;
 }
-.navbar h1{
+
+.navbar h1 {
     font-size: 32px;
+    text-shadow: 0px 2px 1px white;
 
 }
 
 
-.app{
+.app {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.container{
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,49 +43,110 @@ body{
     background-color: #333333;
     padding: 30px;
     border-radius: 16px;
-    width: 60vw;
-    gap: 20px;
-    opacity: .8;
+    width: 80vw;
+     gap: 20px;
+    opacity: .6;
+
+
 }
 
-.color-boxs{
+.color-boxs {
+    padding-top: 20px;
     display: flex;
     justify-content: space-evenly;
-    
-    width: 100%;
-    
-}
-.color-box{
+    flex-wrap: wrap;
 
+}
+
+.color-box {
+    margin: 5px;
     width: 400px;
     height: 200px;
     border: 1px solid black;
+
 }
 
-#guess-color-box{
+#guess-color-box {
     background-color: rgb(0, 0, 0);
+
 }
-.sliders{
+
+.sliders {
     display: flex;
     flex-direction: column;
 }
-
-input{
+/* input ranges decorations */
+input {
     width: 50vw;
 }
 
-.buttons{
-  width: 50vw;
- display: flex;
- justify-content: space-evenly;
 
-    
+/* lables text editing  */
+label{
+    color: white;
+    text-shadow: 1px 1px 1px white;
 }
-button{
-    background-color: blanchedalmond;
-    border:  1px solid blue;
+.buttons {
+    width: 50vw;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+
+
 }
-button:hover{
-    background-color: green;
+
+button {
+    background-image: linear-gradient(white, blue);
+    color: white;
+    font-weight: bolder;
+    border: 1px solid black;
+    padding: 5px;
+    box-shadow: 0 2px 5px wheat;
+}
+
+button:hover {
+    background-image: linear-gradient(red, black);
+    box-shadow: 0px ;
+
+}
+
+/* Media query for screens with a maximum width of 768 pixels */
+@media (max-width: 768px) {
+
+    /* nav bar font size */
+    .navbar h1 {
+        font-size: 25px;
+    }
+
+    .color-box {
+
+        width: 200px;
+        height: 200px;
+    }
+
+    .container {
+        height: 95vh;
+        gap: 5px;
+    }
+
+    button {
+        margin: 5px;
+        padding: 5px;
+    }
+
+
+
+}
+
+/* Media query for screens with a minimum width of 769 pixels and a maximum of 1200 pixels */
+@media (min-width: 769px) and (max-width: 1200px) {}
+
+/* Media query for screens with a minimum width of 1201 pixels */
+@media (min-width: 1201px) {
+    body {
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 
 }
