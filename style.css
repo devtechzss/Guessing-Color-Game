@@ -6,8 +6,11 @@
 }
 
 body {
-    height: 100vh;
-    background-image: url('./bg.jpg');
+
+   background-color: #FFDEE9;
+   background-image: linear-gradient(0deg,#3a1d3a 0%,#1bdcf1 100%);
+   background-repeat: no-repeat;
+   background-size: cover;
 
 
     backdrop-filter: .6;
